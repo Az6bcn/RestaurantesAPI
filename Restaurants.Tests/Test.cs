@@ -8,7 +8,6 @@ namespace Restaurants.Tests
     [TestClass]
     public class Test
     {
-
         [TestMethod]
         public void GetSummaries_WhenCalled_Should_Return10Items()
         {
