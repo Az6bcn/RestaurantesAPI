@@ -36,6 +36,7 @@ namespace RestaurantsAPI.Controllers
             .ToArray();
         }
 
+        [NonAction]
         public List<string> MethodForTesting()
         {
             return Summaries.ToList();
