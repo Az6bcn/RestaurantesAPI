@@ -403,3 +403,6 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+RestaurantsAPI/appsettings.Development.json
+
+RestaurantsAPI/appsettings.json
