@@ -15,4 +15,7 @@
     <Folder Include="EntitiesConfig\" />
     <Folder Include="Context\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Restaurants.Commons\Restaurants.Commons.csproj" />
+  </ItemGroup>
 </Project>
