@@ -9,7 +9,7 @@ namespace Restaurants.DataAccess.Entities
         public string TenantName { get; set; }
         public TenantStatusEnum Status { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime Deleted { get; set; }
+        public DateTime? Deleted { get; set; }
         //public DateTime SubscriptionExpiryDate { get; set; }
     }
 }
