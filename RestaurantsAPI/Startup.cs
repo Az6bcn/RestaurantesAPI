@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Restaurants.DataAccess.Context;
 
 namespace RestaurantsAPI
 {
@@ -25,6 +27,16 @@ namespace RestaurantsAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // configure dbContextOptions to be passed to DbContext
+            services.AddDbContext<AppDbContext>(option =>
+            {
+                option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                    sqlDbOption =>
+                    {
+                        sqlDbOption.MigrationsAssembly("Restaurants.Data");
+                    });
+            });
+
             services.AddControllers();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
