@@ -406,3 +406,5 @@ ASALocalRun/
 RestaurantsAPI/appsettings.Development.json
 
 RestaurantsAPI/appsettings.json
+
+Restaurants.DataAccess/Migrations/
